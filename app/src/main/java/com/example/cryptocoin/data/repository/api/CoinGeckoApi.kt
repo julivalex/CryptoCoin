@@ -1,7 +1,7 @@
-package com.example.cryptocoin.data.api
+package com.example.cryptocoin.data.repository.api
 
-import com.example.cryptocoin.data.CoinMarketChartResponse
-import com.example.cryptocoin.data.CoinMarketsResponse
+import com.example.cryptocoin.data.bean.response.CoinMarketChartResponse
+import com.example.cryptocoin.data.bean.response.CoinMarketsResponse
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Path

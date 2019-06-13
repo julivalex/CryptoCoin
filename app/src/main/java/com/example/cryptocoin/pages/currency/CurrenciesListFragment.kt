@@ -1,4 +1,4 @@
-package com.example.cryptocoin.fragments
+package com.example.cryptocoin.pages.currency
 
 import android.os.Bundle
 import android.support.v4.app.Fragment

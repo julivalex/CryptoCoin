@@ -7,7 +7,7 @@
         android:clipToPadding="false"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".fragments.CurrenciesListFragment">
+        tools:context=".pages.currency.CurrenciesListFragment">
 
 
 </android.support.v7.widget.RecyclerView>

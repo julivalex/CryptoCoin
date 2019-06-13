@@ -1,8 +1,8 @@
-package com.example.cryptocoin.di
+package com.example.cryptocoin
 
 import android.app.Application
 
-class App: Application() {
+class CoinAppilation: Application() {
 
     override fun onCreate() {
         super.onCreate()

@@ -1,4 +1,4 @@
-package com.example.cryptocoin.activities
+package com.example.cryptocoin.pages
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -6,7 +6,8 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import com.example.cryptocoin.R
-import com.example.cryptocoin.fragments.CurrenciesListFragment
+import com.example.cryptocoin.pages.about.AboutActivity
+import com.example.cryptocoin.pages.currency.CurrenciesListFragment
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.InterstitialAd
 

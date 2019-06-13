@@ -1,4 +1,4 @@
-package com.example.cryptocoin.activities
+package com.example.cryptocoin.pages.about
 
 import android.content.Intent
 import android.net.Uri

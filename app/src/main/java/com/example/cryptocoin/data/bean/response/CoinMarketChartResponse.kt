@@ -1,4 +1,4 @@
-package com.example.cryptocoin.data
+package com.example.cryptocoin.data.bean.response
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
