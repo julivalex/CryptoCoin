@@ -1,6 +1,9 @@
 package com.example.cryptocoin.di
 
+import com.example.cryptocoin.data.bean.converter.CoinConverterFactory
+import com.example.cryptocoin.data.repository.CoinGeckoRepositoryImpl
 import com.example.cryptocoin.data.repository.api.CoinGeckoApi
+import com.example.cryptocoin.domain.repository.CoinGeckoRepository
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -49,4 +52,8 @@ class AppModule(private val baseUrl: String) {
     @AppScope
     @Provides
     fun provideCoinGeckoApi(retrofit: Retrofit): CoinGeckoApi = retrofit.create(CoinGeckoApi::class.java)
+
+    @AppScope
+    @Provides
+    fun provideCoinGeckoRepository(api: CoinGeckoApi): CoinGeckoRepository = CoinGeckoRepositoryImpl(api, CoinConverterFactory())
 }

@@ -16,7 +16,7 @@ interface CoinGeckoApi {
         @Query("per_page") perPage: Int = 100,
         @Query("sparkline") sparkline: Boolean = false,
         @Query("order") order: String = "market_cap_desc"
-    ): Single<CoinMarketsResponse>
+    ): Single<List<CoinMarketsResponse>>
 
     //запрос данных для графика
     @GET("coins/{id}/market_chart")

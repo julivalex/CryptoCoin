@@ -1,6 +1,6 @@
 package com.example.cryptocoin.domain.repository
 
-import com.example.cryptocoin.data.bean.response.CoinMarketsResponse
+import com.example.cryptocoin.domain.model.CoinMarkets
 import io.reactivex.Single
 
 interface CoinGeckoRepository {
@@ -8,5 +8,5 @@ interface CoinGeckoRepository {
     /**
      * Метод получения списка криптовалют
      */
-    fun getCoinMarket(): Single<CoinMarketsResponse>
+    fun getCoinMarket(): Single<List<CoinMarkets>>
 }
