@@ -29,7 +29,9 @@ abstract class BaseAdapter<VH : BaseAdapter.BaseViewHolder> : RecyclerView.Adapt
 
     //функция добавления всех элементов
     fun add(newItems: List<Any>) {
+        items.clear()
         items.addAll(newItems)
+        notifyDataSetChanged()
     }
 
     //абстрактный класс ViewHolder

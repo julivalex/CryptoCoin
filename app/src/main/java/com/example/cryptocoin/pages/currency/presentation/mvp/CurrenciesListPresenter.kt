@@ -1,8 +1,9 @@
 package com.example.cryptocoin.pages.currency.presentation.mvp
 
 import com.arellomobile.mvp.InjectViewState
-import com.example.cryptocoin.base.BasePresenter
+import com.example.cryptocoin.base.di.BasePresenter
 import com.example.cryptocoin.pages.currency.domain.CurrenciesListInteractor
+import com.example.cryptocoin.pages.currency.presentation.adapter.CurrenciesAdapter
 import com.example.cryptocoin.utils.DefaultComposerSinger
 import javax.inject.Inject
 
@@ -11,22 +12,24 @@ class CurrenciesListPresenter @Inject constructor(
     private val interactor: CurrenciesListInteractor
 ) : BasePresenter<CurrenciesListView>() {
 
+    private val items = CurrenciesAdapter()
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
+        onMakeList()
     }
 
     fun onMakeList() {
-        disposable?.addAll(interactor.getCoinMarket()
+        disposable?.add(interactor.getCoinMarket()
             .compose(DefaultComposerSinger(viewState))
             .subscribe(
-                {
-                    viewState::notifyAdapter
+                { list ->
+                    items.add(list)
+                    viewState.showData(items)
                 },
-                {
-                    viewState::showErrorMessage
+                { error ->
+                    viewState.showErrorMessage(error.message)
                 }
             ))
-
     }
 
     fun onRefreshList() {

@@ -1,4 +1,4 @@
-package com.example.cryptocoin.base
+package com.example.cryptocoin.base.di
 
 import com.arellomobile.mvp.MvpPresenter
 import io.reactivex.disposables.CompositeDisposable

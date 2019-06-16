@@ -1,6 +1,6 @@
 package com.example.cryptocoin.utils
 
-import com.example.cryptocoin.base.BaseView
+import com.example.cryptocoin.base.di.BaseView
 import io.reactivex.Single
 import io.reactivex.SingleSource
 import io.reactivex.SingleTransformer

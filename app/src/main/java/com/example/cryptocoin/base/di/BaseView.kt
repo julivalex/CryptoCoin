@@ -1,4 +1,4 @@
-package com.example.cryptocoin.base
+package com.example.cryptocoin.base.di
 
 import com.arellomobile.mvp.MvpView
 import com.arellomobile.mvp.viewstate.strategy.AddToEndSingleStrategy

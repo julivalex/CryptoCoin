@@ -1,7 +1,7 @@
 package com.example.cryptocoin.base.fragment
 
 import com.arellomobile.mvp.MvpAppCompatFragment
-import com.example.cryptocoin.base.BaseView
+import com.example.cryptocoin.base.di.BaseView
 
 abstract class BaseFragment : MvpAppCompatFragment(), BaseView {
 
