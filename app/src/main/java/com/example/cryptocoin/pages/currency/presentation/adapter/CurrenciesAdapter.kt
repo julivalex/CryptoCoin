@@ -1,11 +1,11 @@
-package com.example.cryptocoin.pages.currency.presentartion.adapter
+package com.example.cryptocoin.pages.currency.presentation.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.example.cryptocoin.R
-import com.example.cryptocoin.base.BaseAdapter
+import com.example.cryptocoin.base.adapter.BaseAdapter
 import com.example.cryptocoin.domain.model.CoinMarkets
 import kotlinx.android.synthetic.main.recycler_view_item.view.*
 
@@ -19,7 +19,7 @@ class CurrenciesAdapter : BaseAdapter<CurrenciesAdapter.CurrenciesViewHolder>() 
     class CurrenciesViewHolder(view: View) : BaseViewHolder(view) {
 
         init {
-                itemView.setOnClickListener {
+            itemView.setOnClickListener {
             }
         }
 

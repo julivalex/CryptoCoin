@@ -1,4 +1,4 @@
-package com.example.cryptocoin.base
+package com.example.cryptocoin.base.adapter
 
 import android.support.v7.widget.RecyclerView
 import android.view.View

@@ -12,7 +12,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme" tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".pages.MainActivity">
+        <activity android:name=".pages.CoinActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -21,7 +21,7 @@
         </activity>
 
         <activity android:name=".pages.about.AboutActivity"
-                  android:parentActivityName=".pages.MainActivity"/>
+                  android:parentActivityName=".pages.CoinActivity"/>
 
         <meta-data
                 android:name="com.google.android.gms.ads.APPLICATION_ID"

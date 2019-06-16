@@ -8,7 +8,7 @@ import com.example.cryptocoin.utils.Uri
 
 class CoinAppilation : Application() {
 
-    lateinit var component: AppComponent
+    private var component: AppComponent? = null
 
     companion object {
         lateinit var instance: CoinAppilation private set
@@ -17,8 +17,22 @@ class CoinAppilation : Application() {
     override fun onCreate() {
         super.onCreate()
         instance = this
-        component = DaggerAppComponent.builder()
+        createComponent()
+    }
+
+    fun getComponent(): AppComponent {
+        return component ?: createComponent()
+    }
+
+    fun releaseComponent() {
+        component = null
+    }
+
+    private fun createComponent(): AppComponent {
+        val component: AppComponent = DaggerAppComponent.builder()
             .appModule(AppModule(Uri.BASE))
             .build()
+        this.component = component
+        return component
     }
 }
