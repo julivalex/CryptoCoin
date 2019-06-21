@@ -12,10 +12,10 @@ class CoinGeckoRepositoryImpl(
     private val convertFactory: ConverterFactory
 ) : CoinGeckoRepository {
 
-    override fun getCoinMarket(): Single<List<CoinMarkets>> {
+    override fun getCoinMarket(vsCurrency: String): Single<List<CoinMarkets>> {
         val converter = convertFactory.getConverter(
             CoinMarketsResponse::class.java, CoinMarkets::class.java)
-        return coinGeckoApi.getCoinMarket().map(converter::convert)
+        return coinGeckoApi.getCoinMarket(vsCurrency).map(converter::convert)
     }
 
 }

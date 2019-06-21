@@ -12,18 +12,17 @@ class CurrenciesListPresenter @Inject constructor(
     private val interactor: CurrenciesListInteractor
 ) : BasePresenter<CurrenciesListView>() {
 
-    private val items = CurrenciesAdapter()
+    private val items =  CurrenciesAdapter()
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
         onMakeList()
     }
 
-    fun onMakeList() {
-        disposable?.add(interactor.getCoinMarket()
+    private fun onMakeList() {
+        disposable?.add(interactor.getCoinMarket("usd")
             .compose(DefaultComposerSinger(viewState))
             .subscribe(
-                { list ->
-                    items.add(list)
+                {   items.add(it)
                     viewState.showData(items)
                 },
                 { error ->

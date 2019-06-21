@@ -1,7 +1,6 @@
 package com.example.cryptocoin.pages.currency
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +10,6 @@ import com.arellomobile.mvp.presenter.ProvidePresenter
 
 import com.example.cryptocoin.R
 import com.example.cryptocoin.base.fragment.BaseFragment
-import com.example.cryptocoin.domain.model.CoinMarkets
 import com.example.cryptocoin.pages.CoinActivity
 import com.example.cryptocoin.pages.currency.presentation.adapter.CurrenciesAdapter
 import com.example.cryptocoin.pages.currency.presentation.mvp.CurrenciesListPresenter
@@ -27,8 +25,6 @@ class CurrenciesListFragment : BaseFragment(), CurrenciesListView {
 
     @ProvidePresenter
     fun providePresenter() = presenter
-
-    lateinit var currenciesAdapter: CurrenciesAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         (activity as CoinActivity).appComponent.currenciesListComponent().inject(this)

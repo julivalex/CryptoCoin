@@ -17,13 +17,13 @@ class CoinMarketsResponseConverter : OneWayConverter<CoinMarketsResponse, CoinMa
                     it.image ?: throw IllegalArgumentException(),
                     it.currentPrice ?: throw IllegalArgumentException(),
                     it.marketCap ?: throw IllegalArgumentException(),
-                    it.marketCapRank ?: throw IllegalArgumentException(),
-                    it.totalVolume ?: throw IllegalArgumentException(),
-                    it.priceChangePercentage24h ?: throw IllegalArgumentException(),
-                    it.marketCapChangePercentage24h ?: throw IllegalArgumentException(),
-                    it.circulatingSupply ?: throw IllegalArgumentException(),
-                    it.totalSupply ?: throw IllegalArgumentException(),
-                    it.ath ?: throw IllegalArgumentException(),
+                    it.marketCapRank ?: 0,
+                    it.totalVolume ?: 0.0F,
+                    it.priceChangePercentage24h ?: 0.0F,
+                    it.marketCapChangePercentage24h ?: 0.0F,
+                    it.circulatingSupply ?: 0.0,
+                    it.totalSupply ?: 0L,
+                    it.ath ?: 0.0F,
                     it.athChangePercentage ?: throw IllegalArgumentException()
                 )
             } catch (ex: Exception) {
