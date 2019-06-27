@@ -1,6 +1,6 @@
 package com.example.cryptocoin.data.repository
 
-import com.example.cryptocoin.core.ConverterFactory
+import com.example.cryptocoin.core.converter.ConverterFactory
 import com.example.cryptocoin.data.bean.response.CoinMarketsResponse
 import com.example.cryptocoin.data.repository.api.CoinGeckoApi
 import com.example.cryptocoin.domain.model.CoinMarkets
@@ -12,10 +12,10 @@ class CoinGeckoRepositoryImpl(
     private val convertFactory: ConverterFactory
 ) : CoinGeckoRepository {
 
-    override fun getCoinMarket(vsCurrency: String): Single<List<CoinMarkets>> {
+    override fun getCoinMarket(): Single<List<CoinMarkets>> {
         val converter = convertFactory.getConverter(
             CoinMarketsResponse::class.java, CoinMarkets::class.java)
-        return coinGeckoApi.getCoinMarket(vsCurrency).map(converter::convert)
+        return coinGeckoApi.getCoinMarket().map(converter::convert)
     }
 
 }

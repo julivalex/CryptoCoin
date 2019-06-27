@@ -8,5 +8,5 @@ import javax.inject.Inject
 class CurrenciesListInteractor @Inject constructor(
     private val repository: CoinGeckoRepository
 ) {
-    fun getCoinMarket(vsCurrency: String): Single<List<CoinMarkets>> = repository.getCoinMarket(vsCurrency)
+    fun getCoinMarket(): Single<List<CoinMarkets>> = repository.getCoinMarket()
 }

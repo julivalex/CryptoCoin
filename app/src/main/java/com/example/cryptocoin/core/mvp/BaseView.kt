@@ -1,4 +1,4 @@
-package com.example.cryptocoin.base.di
+package com.example.cryptocoin.core.mvp
 
 import com.arellomobile.mvp.MvpView
 import com.arellomobile.mvp.viewstate.strategy.AddToEndSingleStrategy
@@ -12,7 +12,4 @@ interface BaseView: MvpView {
 
     @StateStrategyType(SkipStrategy::class)
     fun showErrorMessage(text: String?)
-
-    @StateStrategyType(AddToEndSingleStrategy::class)
-    fun refresh()
 }

@@ -1,4 +1,4 @@
-package com.example.cryptocoin.utils
+package com.example.cryptocoin.core.utils
 
 import java.text.SimpleDateFormat
 import java.util.*

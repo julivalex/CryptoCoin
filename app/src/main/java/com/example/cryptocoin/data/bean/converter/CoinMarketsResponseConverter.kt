@@ -1,6 +1,6 @@
 package com.example.cryptocoin.data.bean.converter
 
-import com.example.cryptocoin.core.OneWayConverter
+import com.example.cryptocoin.core.converter.OneWayConverter
 import com.example.cryptocoin.data.bean.response.CoinMarketsResponse
 import com.example.cryptocoin.domain.model.CoinMarkets
 import java.lang.Exception

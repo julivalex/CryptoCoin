@@ -8,5 +8,5 @@ interface CoinGeckoRepository {
     /**
      * Метод получения списка криптовалют
      */
-    fun getCoinMarket(vsCurrency: String): Single<List<CoinMarkets>>
+    fun getCoinMarket(): Single<List<CoinMarkets>>
 }

@@ -1,4 +1,4 @@
-package com.example.cryptocoin.utils
+package com.example.cryptocoin.core.utils
 
 import com.github.mikephil.charting.components.AxisBase
 import com.github.mikephil.charting.formatter.IAxisValueFormatter

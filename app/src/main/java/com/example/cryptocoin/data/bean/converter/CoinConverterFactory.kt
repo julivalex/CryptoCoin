@@ -1,7 +1,7 @@
 package com.example.cryptocoin.data.bean.converter
 
-import com.example.cryptocoin.core.ConverterFactory
-import com.example.cryptocoin.core.OneWayConverter
+import com.example.cryptocoin.core.converter.ConverterFactory
+import com.example.cryptocoin.core.converter.OneWayConverter
 import com.example.cryptocoin.data.bean.response.CoinMarketsResponse
 
 class CoinConverterFactory: ConverterFactory {

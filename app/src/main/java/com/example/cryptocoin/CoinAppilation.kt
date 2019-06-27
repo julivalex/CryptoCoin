@@ -4,7 +4,7 @@ import android.app.Application
 import com.example.cryptocoin.di.AppComponent
 import com.example.cryptocoin.di.AppModule
 import com.example.cryptocoin.di.DaggerAppComponent
-import com.example.cryptocoin.utils.Uri
+import com.example.cryptocoin.core.utils.Uri
 
 class CoinAppilation : Application() {
 

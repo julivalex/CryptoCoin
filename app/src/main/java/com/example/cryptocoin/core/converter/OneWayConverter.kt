@@ -1,4 +1,4 @@
-package com.example.cryptocoin.core
+package com.example.cryptocoin.core.converter
 
 abstract class OneWayConverter<T, U> {
 
