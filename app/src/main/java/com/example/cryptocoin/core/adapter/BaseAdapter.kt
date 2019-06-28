@@ -35,7 +35,7 @@ abstract class BaseAdapter<VH : BaseAdapter.BaseViewHolder> : RecyclerView.Adapt
     }
 
     //абстрактный класс ViewHolder
-    abstract class BaseViewHolder(protected val view: View) : RecyclerView.ViewHolder(view) {
+    abstract class BaseViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         abstract fun bind(item: Any)
     }
 }

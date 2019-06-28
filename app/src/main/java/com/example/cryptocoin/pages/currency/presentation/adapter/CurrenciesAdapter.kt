@@ -17,22 +17,23 @@ class CurrenciesAdapter : BaseAdapter<CurrenciesAdapter.CurrenciesViewHolder>() 
         return CurrenciesViewHolder(view)
     }
 
-    class CurrenciesViewHolder(view: View) : BaseViewHolder(view) {
+    override fun onBindViewHolder(holder: CurrenciesViewHolder, position: Int) {
+        holder.bind(getItem(position))
+    }
 
-        init {
-            itemView.setOnClickListener {
-            }
-        }
+    class CurrenciesViewHolder(
+        view: View
+    ) : BaseAdapter.BaseViewHolder(view) {
 
-        override fun bind(item: Any) {
+        override fun bind(item: Any) = with(itemView) {
             if (item is CoinMarkets) {
-                Glide.with(view.context).load(item.image).into(view.ivCurrencyIcon)
-                view.apply {
-                    tvCurrencySym.text = item.symbol
-                    tvCurrencyName.text = item.name
-                    tvCurrencyMarketCap.text = item.marketCap.toString()
-                    tvCurrencyPrice.text = item.currentPrice.toString()
-                }
+                Glide.with(context).load(item.image).into(ivCurrencyIcon)
+                tvCurrencySym.text = item.symbol
+                tvCurrencyName.text = item.name
+                tvCurrencyMarketCap.text = item.marketCap.toString()
+                tvCurrencyPrice.text = item.currentPrice.toString()
+            }
+            setOnClickListener {
             }
         }
     }
